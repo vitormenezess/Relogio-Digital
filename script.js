@@ -10,5 +10,13 @@ const updateDisplay = () => {
   hour.innerText = format(time.getHours());
   minutes.innerText = format(time.getMinutes());
   second.textContent = format(time.getSeconds());
+  
+  const day = document.getElementById('day');
+  const month = document.getElementById('month');
+  const year = document.getElementById('year');
+  day.innerText = format(time.getDate())
+  month.innerText = format(time.getMonth()+1)
+  year.innerText = time.getFullYear()
+
 };
 setInterval(updateDisplay, 1000);
